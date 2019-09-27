@@ -1,0 +1,14 @@
+10 LET a = 10 + 9
+20 PRINT a
+30 GOSUB 1337
+40 PRINT "IT WORKS!!!"
+50 END
+60 REM Let's see what happens...
+70 REM ...
+
+1337 FOR i = 1 TO 2
+1338 LET a = a + 1
+1339 PRINT a
+1400 NEXT
+1410 RETURN
+

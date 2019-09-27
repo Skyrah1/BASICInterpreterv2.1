@@ -1,0 +1,8 @@
+10 LET i = 0
+20 LET j = i + 10
+30 PRINT j
+40 IF j > i THEN k = 11
+50 PRINT k
+60 IF k < i THEN string = "lol" ELSE string = "nope.avi"
+70 PRINT string
+

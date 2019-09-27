@@ -1,0 +1,5 @@
+10 LET i = 0
+20 GOTO 40
+30 LET i = 1
+40 PRINT i
+
