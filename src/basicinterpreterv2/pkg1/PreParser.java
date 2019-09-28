@@ -129,34 +129,19 @@ public class PreParser extends Program {
                 }
             }
         }
-
-        /*Pseudocode because the sorting process might take a while to figure out
-        
-        SET sorted TO false
-        WHILE sorted = false DO
-            SET sorted TO true
-            SET i TO 0
-            FOR i = 0 TO <length of numArray - 2>
-                IF numArray[i] .GT. numArray[i + 1] THEN
-                    SET numSorter TO numArray[i + 1]
-                    SET codeSorter TO codeArray[i + 1]
-                    SET numArray[i + 1] TO numArray[i]
-                    SET codeArray[i + 1] TO codeArray[i]
-                    SET numArray[i] TO numSorter
-                    SET codeArray[i] TO codeSorter
-                    
-                    SET sorted TO false
-                ENDIF
-            NEXT
-            
-        ENDWHILE
-        
-        (reducing the length of the for loop each pass is an option)
-         */
+	
         if (validCode) {
-            int numSorter;
+	    QuickSort quickSort = new QuickSort();
+	    quickSort.sort(numArray, codeArray);
+            
+	    /*
+	    //Below is the old sorting code that was used before I knew that
+	    //quick sort existed
+	    //RIP inefficient code (2017 - 2019)
+	    
+	    int numSorter;
             String codeSorter;
-            boolean sorted = false;
+	    boolean sorted = false;
             while (sorted == false) {
                 sorted = true;
                 for (int i = 0; i < numArray.length - 1; i++) {
@@ -171,7 +156,7 @@ public class PreParser extends Program {
                         sorted = false;
                     }
                 }
-            }
+            }*/
 
             //Clears the codeArea and reprints listed code
             String newCode = "";
